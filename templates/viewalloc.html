@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ project.name }}
+{% endblock title %}
+
+{% block content %}
+
+<div class="container main-part">
+
+{% if  projects %}
+{% for project in projects %}
+<h1>
+{{project.name}}
+</h1>
+<h1>
+{{project.department}}
+</h1>
+<h1>
+{{project.projecttitle}}
+</h1>
+{% endfor %}
+{% else %}
+You do not have allocations yet
+{% endif %}
+
+
+    
+</div>
+
+{% endblock content %}
+  
